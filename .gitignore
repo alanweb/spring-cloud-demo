@@ -1,1 +1,4 @@
-*.log
+**.mvn
+*.gitignore
+**.log
+**.iml

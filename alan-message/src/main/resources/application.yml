@@ -1,0 +1,39 @@
+spring:
+  kafka:
+    consumer:
+      group-id: oc-test4
+      auto-offset-reset: earliest
+      fetch-min-size: 1
+      bootstrap-servers:
+        - 192.168.119.4:9092
+      key-deserializer:
+        org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer:
+        org.apache.kafka.common.serialization.StringDeserializer
+oc:
+  krb5:
+    conf: D:/xxx.d
+  jaasCache:
+    conf: D:/xxx.z
+  topic:
+    name: test-topic
+
+logging:
+  config: classpath:logback-boot.xml
+ftp:
+  #临时存放目录
+  tmpPath: E:/opt/tmp
+  #配置ftp服务器ip地址
+ # ip: 192.168.125.58
+  ip: 192.168.216.202
+  #配置ftp服务器端口
+  port: 21
+  #ftp目录
+  uploadPath: /
+  #ftp用户名
+  sysUser: hp
+  #ftp密码
+  passWord: wb931021
+  #定时器
+  cron: 0/3 * * * * ?
+  #cron: 0 0 14 * * ?
